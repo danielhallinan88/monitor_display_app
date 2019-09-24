@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Display</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Mansalva&display=swap" rel="stylesheet">
 <style>
 /* Chrome, Safari and Opera syntax */
 :-webkit-full-screen {
@@ -27,8 +28,13 @@
 }
 
 body {
-  background-image: url("landscape.jpg");
+  background-image: url("js/wave.gif");
   background-color: #cccccc;
+
+  height: 100%
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 /* Style the button */
@@ -40,13 +46,16 @@ button {
 
 /* Stylize clock */
 #clock {
-  font-size: 530px;
+  font-size: 500px;
+  font-family: 'Mansalva', cursive;
+  text-align: center;
+  color: white
 }
 
 </style>
   </head>
   <body>
-    <h2>Fullscreen with JavaScript</h2>
+    <!-- <h2>Fullscreen with JavaScript</h2> -->
 
 <button id="fullScreenButton" onclick="openFullscreen();">Open Fullscreen</button>
 
@@ -61,6 +70,8 @@ function time() {
   var m = d.getMinutes();
   var h = d.getHours();
   span.textContent = h + ":" + m + ":" + s;
+
+  var tmp = "";
 }
 
 setInterval(time, 1000);
