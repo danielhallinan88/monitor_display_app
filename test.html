@@ -7,7 +7,8 @@
 <style>
 /* Chrome, Safari and Opera syntax */
 :-webkit-full-screen {
-  background-color: yellow;
+  background-color: white:
+  
 }
 
 /* Firefox syntax */
@@ -22,7 +23,12 @@
 
 /* Standard syntax */
 :fullscreen {
-  background-color: yellow;
+  background-color: white:
+}
+
+body {
+  background-image: url("landscape.jpg");
+  background-color: #cccccc;
 }
 
 /* Style the button */
@@ -30,16 +36,36 @@ button {
   padding: 20px;
   font-size: 20px;
 }
+
+
+/* Stylize clock */
+#clock {
+  font-size: 530px;
+}
+
 </style>
   </head>
   <body>
     <h2>Fullscreen with JavaScript</h2>
-<p>Click on the "Open Fullscreen" button to open this page in fullscreen mode. Close it by either clicking the "Esc" key on your keyboard, or with the "Close Fullscreen" button.</p>
 
-<button onclick="openFullscreen();">Open Fullscreen</button>
-<!--<button onclick="closeFullscreen();">Close Fullscreen</button> -->
+<button id="fullScreenButton" onclick="openFullscreen();">Open Fullscreen</button>
+
+<span id="clock"></span>
 
 <script>
+var span = document.getElementById('clock');
+
+function time() {
+  var d = new Date();
+  var s = d.getSeconds();
+  var m = d.getMinutes();
+  var h = d.getHours();
+  span.textContent = h + ":" + m + ":" + s;
+}
+
+setInterval(time, 1000);
+
+
 var elem = document.documentElement;
 function openFullscreen() {
   if (elem.requestFullscreen) {
@@ -51,19 +77,10 @@ function openFullscreen() {
   } else if (elem.msRequestFullscreen) { /* IE/Edge */
     elem.msRequestFullscreen();
   }
+
+  document.getElementById("fullScreenButton").style.display="none";
 }
 
-function closeFullscreen() {
-  if (document.exitFullscreen) {
-    document.exitFullscreen();
-  } else if (document.mozCancelFullScreen) {
-    document.mozCancelFullScreen();
-  } else if (document.webkitExitFullscreen) {
-    document.webkitExitFullscreen();
-  } else if (document.msExitFullscreen) {
-    document.msExitFullscreen();
-  }
-}
 </script>
   </body>
 </html>
