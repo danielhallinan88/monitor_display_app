@@ -32,3 +32,8 @@ function openFullscreen() {
 
   document.getElementById("fullScreenButton").style.display="none";
 }
+
+// Weather
+// DOCS: https://openweathermap.org/current
+var mydata = JSON.parse(data);
+console.log(mydata['city']);

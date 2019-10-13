@@ -38,7 +38,9 @@ button {
 /* Stylize clock */
 #clock {
   font-size: 200px;
-  font-family: 'Mansalva', cursive;
+  /*font-family: 'Mansalva', cursive;*/
+  font-family: 'Roboto Mono', monospace;
   text-align: center;
-  color: white
+  border: 20px solid white;
+  color: white;
 }
