@@ -1,0 +1,44 @@
+/* Chrome, Safari and Opera syntax */
+
+:-webkit-full-screen {
+  background-color: white:
+}
+
+/* Firefox syntax */
+:-moz-full-screen {
+  background-color: yellow;
+}
+
+/* IE/Edge syntax */
+:-ms-fullscreen {
+  background-color: yellow;
+}
+
+/* Standard syntax */
+:fullscreen {
+  background-color: white:
+}
+
+body {
+  background-image: url("../images/landscape.jpg");
+  background-color: black;
+
+  height: 100%
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Style the button */
+button {
+  padding: 20px;
+  font-size: 20px;
+}
+
+/* Stylize clock */
+#clock {
+  font-size: 200px;
+  font-family: 'Mansalva', cursive;
+  text-align: center;
+  color: white
+}
