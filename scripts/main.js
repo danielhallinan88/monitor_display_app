@@ -35,5 +35,12 @@ function openFullscreen() {
 
 // Weather
 // DOCS: https://openweathermap.org/current
-var mydata = JSON.parse(data);
-console.log(mydata['city']);
+function getWeather() {
+  var mydata = JSON.parse(data);
+  console.log(mydata);
+  // Example: https://api.openweathermap.org/data/2.5/weather?q=Madison&units=imperial&APPID=d3a1c67a45b3fbaa8cbc44134f4f7eb8
+  var url_base = 'https://api.openweathermap.org/data/2.5/weather?q=';
+
+}
+
+getWeather();
