@@ -35,12 +35,19 @@ function openFullscreen() {
 
 // Weather
 // DOCS: https://openweathermap.org/current
-function getWeather() {
-  var mydata = JSON.parse(data);
-  console.log(mydata);
+function getWeather(type) {
+  var myData = JSON.parse(data);
+  var res;
+  // console.log(myData);
   // Example: https://api.openweathermap.org/data/2.5/weather?q=Madison&units=imperial&APPID=d3a1c67a45b3fbaa8cbc44134f4f7eb8
-  var url_base = 'https://api.openweathermap.org/data/2.5/weather?q=';
+
+  var url_base = 'https://api.openweathermap.org/data/2.5/' + type + '?q=' + myData['city'];
+  url_base    += '&units=' + myData['units'] + '&APPID=' + myData['key'];
+  //console.log(url_base);
+
+  
 
 }
 
-getWeather();
+current = getWeather('forecast');
+console.log(current);
