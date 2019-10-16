@@ -36,18 +36,24 @@ function openFullscreen() {
 // Weather
 // DOCS: https://openweathermap.org/current
 function getWeather(type) {
-  var myData = JSON.parse(data);
-  var res;
-  // console.log(myData);
-  // Example: https://api.openweathermap.org/data/2.5/weather?q=Madison&units=imperial&APPID=d3a1c67a45b3fbaa8cbc44134f4f7eb8
+  var myData     = JSON.parse(data);
+  var myCurrent  = JSON.parse(current);
+  var myForecast = JSON.parse(forecast)
 
+  //console.log(myData);
+  // Example: https://api.openweathermap.org/data/2.5/weather?q=Madison&units=imperial&APPID=d3a1c67a45b3fbaa8cbc44134f4f7eb8
   var url_base = 'https://api.openweathermap.org/data/2.5/' + type + '?q=' + myData['city'];
   url_base    += '&units=' + myData['units'] + '&APPID=' + myData['key'];
   //console.log(url_base);
 
-  
-
+  console.log(myForecast);
 }
 
-current = getWeather('forecast');
-console.log(current);
+function timedRefresh(timeoutPeriod) {
+  setTimeout("location.reload(true);", timeoutPeriod);
+}
+
+window.onload = timedRefresh(360000);
+
+getWeather('forecast');
+//console.log(current);
