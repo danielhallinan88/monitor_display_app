@@ -46,7 +46,12 @@ function getWeather(type) {
   url_base    += '&units=' + myData['units'] + '&APPID=' + myData['key'];
   //console.log(url_base);
 
-  console.log(myForecast);
+  //console.log(myForecast);
+  var temp = myForecast['list'][0]['main']['temp'];
+  //console.log(temp);
+
+  return temp;
+  //document.getElementById('current_temp').innerHTML = temp;
 }
 
 function timedRefresh(timeoutPeriod) {
@@ -55,5 +60,9 @@ function timedRefresh(timeoutPeriod) {
 
 window.onload = timedRefresh(360000);
 
-getWeather('forecast');
+window.onload = function(){
+    var temp = getWeather('forecast');
+    //console.log(temp);
+    document.getElementById('current_temp').innerHTML = Math.round(temp) + "°F";
+};
 //console.log(current);
