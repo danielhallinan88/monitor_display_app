@@ -41,7 +41,6 @@ function getWeather(type) {
   var myForecast = JSON.parse(forecast)
 
   //console.log(myData);
-  // Example: https://api.openweathermap.org/data/2.5/weather?q=Madison&units=imperial&APPID=d3a1c67a45b3fbaa8cbc44134f4f7eb8
   var url_base = 'https://api.openweathermap.org/data/2.5/' + type + '?q=' + myData['city'];
   url_base    += '&units=' + myData['units'] + '&APPID=' + myData['key'];
   //console.log(url_base);
