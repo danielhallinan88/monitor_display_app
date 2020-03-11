@@ -30,19 +30,29 @@ body {
 }
 
 /* Style the button */
+
 button {
   padding: 20px;
   font-size: 20px;
 }
 
-div {
-  padding: 40px;
+.section {
+  /*background-color: lightgrey;*/
+  /*height: 20%;*/
+  border: 1em solid white;
+  padding-bottom: 15%;
+  margin: 1%;
 }
+/*
+.section {
+  padding: 40px;
 
+}
+*/
 /* Stylize clock */
+/*
 #clock {
   font-size: 200px;
-  /*font-family: 'Mansalva', cursive;*/
   font-family: 'Roboto Mono', monospace;
   text-align: center;
   border: 20px solid white;
@@ -51,9 +61,9 @@ div {
 
 #current_temp {
   font-size: 100px;
-  /*font-family: 'Mansalva', cursive;*/
   font-family: 'Roboto Mono', monospace;
   text-align: center;
   border: 20px solid white;
   color: white;
 }
+*/
