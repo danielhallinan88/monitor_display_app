@@ -22,11 +22,12 @@
 body {
   background-image: url("../images/landscape.jpg");
   background-color: black;
-
   height: 100%
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  font-family: 'Roboto Mono', monospace;
+  font-color: white;
 }
 
 /* Style the button */
@@ -42,6 +43,15 @@ button {
   border: 1em solid white;
   padding-bottom: 15%;
   margin: 1%;
+
+}
+
+#clock {
+  font-size: 2em;
+  font-family: 'Roboto Mono', monospace;
+  text-align: center;
+  /*border: 20px solid white;*/
+  color: white;
 }
 /*
 .section {
@@ -58,7 +68,8 @@ button {
   border: 20px solid white;
   color: white;
 }
-
+*/
+/*
 #current_temp {
   font-size: 100px;
   font-family: 'Roboto Mono', monospace;
