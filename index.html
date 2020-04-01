@@ -7,6 +7,7 @@
     <link href="styles/style.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Mansalva&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
 	<script type="text/javascript" src="scripts/data.json"></script>
   </head>
@@ -16,17 +17,21 @@
     <!--
     <button id="fullScreenButton" onclick="openFullscreen();">Open Fullscreen</button>
     -->
-	
-    <div class="section">
-      <span id="clock"></span>
-    </div>
-    <div class="section">
-      <span id="current_temp"></span>
-	  <span id="tomorrow_temp"></span>
-	  <span id="future_temp"></span>
-    </div>
-    <div class="section">
-      <span id="schedule">SCHEDULE</span>
+    <div class="container">
+      <div class="row">
+        <span id="clock"></span>
+      </div>
+      <div class="row">
+        <div class="col-sm">
+          <span id="current_temp"></span>
+        </div>
+        <div class="col-sm">
+          <span id="future_temp"></span>
+        </div>
+      </div>
+      <div class="row">
+        <span id="schedule"></span>
+      </div>
     </div>
 
   </body>

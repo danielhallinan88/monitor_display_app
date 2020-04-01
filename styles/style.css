@@ -30,51 +30,19 @@ body {
   font-color: white;
 }
 
-/* Style the button */
-
-button {
-  padding: 20px;
-  font-size: 20px;
+span {
+  padding: .2em;
 }
 
-.section {
-  /*background-color: lightgrey;*/
-  /*height: 20%;*/
-  border: 1em solid white;
-  padding-bottom: 15%;
+.row {
+  border: 1em solid rgba(255,255,255,.8);
+  border-radius: 25px;
+  padding-bottom: 0%;
   margin: 1%;
-
 }
 
 #clock {
   font-size: 2em;
-  font-family: 'Roboto Mono', monospace;
   text-align: center;
-  /*border: 20px solid white;*/
   color: white;
 }
-/*
-.section {
-  padding: 40px;
-
-}
-*/
-/* Stylize clock */
-/*
-#clock {
-  font-size: 200px;
-  font-family: 'Roboto Mono', monospace;
-  text-align: center;
-  border: 20px solid white;
-  color: white;
-}
-*/
-/*
-#current_temp {
-  font-size: 100px;
-  font-family: 'Roboto Mono', monospace;
-  text-align: center;
-  border: 20px solid white;
-  color: white;
-}
-*/
